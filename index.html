@@ -21,13 +21,45 @@
         position: absolute;
         padding:22px 12px 0px ;
         }
+
     </style>
+    <script>
+    function make_l() {
+    var length = 3;
+    var result           = '';
+    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    var charactersLength = characters.length;
+    for ( var i = 0; i < length; i++ ) {
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+   }
+   return result;
+}
+
+    function make_n(length) {
+    var length = 4;
+    var result           = '';
+    var characters       = '0123456789';
+    var charactersLength = characters.length;
+    for ( var i = 0; i < length; i++ ) {
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+   }
+   return result;
+}
+
+function gera_placa() {
+    var result           = '';
+    result +=  make_l();
+    result += '-'
+    result +=  make_n();
+    return result;
+    }
+    </script>
   </head>
   <body>
   <!-- <font size="10" face="Mandatory"> -->
    <!--  <h2>abcde</h2> -->
     <img src="placa2.jpg" alt="some text">
-    <h2 class='fonte-externa'> HJM-9155 </h2>
+    <h2 class='fonte-externa' value=this.gera_placa() > </h2>
     
   </body>
 </html>
