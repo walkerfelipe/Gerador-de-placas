@@ -2,6 +2,7 @@
 <html lang="pt-br">
   <head>
     <title>Gera Placa</title>
+    <meta http-equiv="REFRESH" content="4">
     <meta charset="utf-8">
     <style>
         @font-face{
@@ -15,7 +16,7 @@
         
         h2 {
         position: absolute;
-        padding:0px 90px 0px ;
+        padding:0px 85px 0px ;
         }
         img{
         position: absolute;
@@ -53,13 +54,15 @@ function gera_placa() {
     result +=  make_n();
     return result;
     }
+
     </script>
   </head>
   <body>
   <!-- <font size="10" face="Mandatory"> -->
    <!--  <h2>abcde</h2> -->
     <img src="placa2.jpg" alt="some text">
-    <h2 class='fonte-externa' value=this.gera_placa() > </h2>
+    <h2 id="placa" class='fonte-externa'> <script type="text/javascript">
+    document.write(gera_placa()) </script> </h2>
     
   </body>
 </html>
